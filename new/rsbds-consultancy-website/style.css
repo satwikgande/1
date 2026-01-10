@@ -1,0 +1,207 @@
+:root {
+  --blue: #1f4f82;
+  --green: #4a8f3c;
+  --dark: #1f2933;
+  --light: #f7f9fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  color: var(--dark);
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+
+.logo-box img {
+  height: 45px;
+}
+
+/* NAV */
+.nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.55);
+  min-height: 100vh;
+  padding: 160px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+}
+
+.hero button {
+  margin-top: 35px;
+  padding: 14px 30px;
+  border: none;
+  background: white;
+  color: var(--blue);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ABOUT */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about-content img {
+  width: 45%;
+  border-radius: 12px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.gray {
+  background: var(--light);
+}
+
+/* SERVICES */
+.cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* INDUSTRIES */
+.industry-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* CONTACT */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--dark);
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+/* ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 65px;
+    background: white;
+    width: 200px;
+    flex-direction: column;
+  }
+
+  .nav a {
+    padding: 15px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
